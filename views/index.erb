@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<h1>Rock, Paper, Scisssors</h1>
+
+<% if @name %>
+
+		<h3>Welcome <%=@name %></h3>
+
+<% end %>
+
+<form action="/new_player" method="post">
+
+		Name 	<input type="text" name="name">
+				<input type="submit" value="Sign In">
+
+</form>
