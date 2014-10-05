@@ -9,18 +9,18 @@ class Rockpaperscissors < Sinatra::Base
 
 	enable :sessions
 
-  get '/' do # telling server, give me what you have, reading data.
-    puts session.inspect
-    erb :index
-  end
+  	get '/' do # telling server, give me what you have, reading data.
+    	puts session.inspect
+   		erb :index
+  	end
 
-  post '/new_player' do
-  	puts session.inspect
-  	@name = params[:name] # sending data to index.erb
-  	# session[:me] = params[:name]
-  	player = Player.new(name: @name)
-  	erb :index
-  end
+ 	post '/new_player' do
+  		puts session.inspect
+  		@name = params[:name] # sending data to index.erb
+  		# session[:me] = params[:name]
+  		player = Player.new(name: @name)
+  		erb :index
+  	end
 
   run! if app_file == $0
 end
