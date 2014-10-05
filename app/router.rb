@@ -20,10 +20,5 @@ class Rockpaperscissors < Sinatra::Base
   	erb :index
   end
 
-# post '/new_player' do
-#     "Hello World"
-#   end
-
-  # start the server if ruby file executed directly
   run! if app_file == $0
 end
