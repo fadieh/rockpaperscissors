@@ -1,12 +1,26 @@
-<link rel="stylesheet" type="text/css" href="style.css">
+<!DOCTYPE html>
 
-<h1>Rock, Paper, Scisssors</h1>
+<html>
 
-<% if @name %>
+<head>
 
-		<h3>Welcome <%=@name %></h3>
+</head>
 
-<% end %>
+<body>
+
+<h1 id="title">Rock, Paper, Scisssors</h1>
+
+
+	<% if @name %>
+
+			<h3><%=@name %> vs. Computer</h3>
+
+			<h3>Choose one of the following</h3>
+			<h2>Rock</h2>
+			<h2>Paper</h2>
+			<h2>Scissor</h2>
+
+	<% end %>
 
 <form action="/new_player" method="post">
 
@@ -14,3 +28,9 @@
 				<input type="submit" value="Sign In">
 
 </form>
+
+<a href="">Click here for 2 player</a>
+
+</body>
+
+</html>

@@ -5,9 +5,12 @@ require_relative './models/player' # relative to the location of this file.
 class Rockpaperscissors < Sinatra::Base
 
 
-	set :views, Proc.new { File.join(root, "..", "views") }
+	set :views, Proc.new { File.join(root, "..", "views") } # tell sinatra where to look for your erb page
+
+	enable :sessions
 
   get '/' do # telling server, give me what you have, reading data.
+    puts session.inspect
     erb :index
   end
 

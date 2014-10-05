@@ -12,5 +12,15 @@ When(/^I sign in$/) do
 end
 
 Then(/^I should see a welcome message$/) do
-  expect(page).to have_content 'Welcome Fadie'
+  expect(page).to have_content 'Fadie vs. Computer'
 end
+
+When(/^I have entered my name$/) do
+  fill_in 'name', with: 'Fadie'
+  click_button 'Sign In'
+end
+
+Then(/^should have the choice between Rock, Paper, Scissor$/) do
+	expect(page).to have_content 'Rock Paper Scissor'
+end
+
