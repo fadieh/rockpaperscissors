@@ -15,7 +15,9 @@ class Rockpaperscissors < Sinatra::Base
   end
 
   post '/new_player' do
+  	puts session.inspect
   	@name = params[:name] # sending data to index.erb
+  	# session[:me] = params[:name]
   	player = Player.new(name: @name)
   	erb :index
   end
